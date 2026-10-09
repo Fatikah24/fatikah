@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Clicker 🐱</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated background blobs -->
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+
+  <div class="app-wrapper">
+
+    <!-- Header -->
+    <header class="glass-card header-card">
+      <h1 class="app-title">🐱 Cat Clicker</h1>
+      <p class="app-subtitle">Klik kucing sebanyak mungkin!</p>
+    </header>
+
+    <!-- Score Board -->
+    <div class="glass-card score-card">
+      <div class="score-block">
+        <span class="score-label">Total Klik</span>
+        <span class="score-value" id="total-score">0</span>
+      </div>
+      <div class="score-divider"></div>
+      <div class="score-block">
+        <span class="score-label">Klik / Detik</span>
+        <span class="score-value" id="cps-score">0</span>
+      </div>
+      <div class="score-divider"></div>
+      <div class="score-block">
+        <span class="score-label">Rekor</span>
+        <span class="score-value" id="best-score">0</span>
+      </div>
+    </div>
+
+    <!-- Cat Click Area -->
+    <div class="glass-card cat-card">
+      <div class="cat-container" id="cat-container">
+        <div class="cat-glow"></div>
+        <img
+          src="https://cataas.com/cat?width=280&height=280"
+          alt="Kucing lucu"
+          class="cat-image"
+          id="cat-image"
+          draggable="false"
+        />
+        <div class="click-ripple" id="click-ripple"></div>
+      </div>
+      <p class="cat-hint">👆 Klik kucing!</p>
+    </div>
+
+    <!-- Combo & Milestone -->
+    <div class="glass-card combo-card" id="combo-card">
+      <span class="combo-text" id="combo-text">🔥 Combo x1</span>
+      <div class="combo-bar-bg">
+        <div class="combo-bar" id="combo-bar"></div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="btn-row">
+      <button class="glass-btn btn-new-cat" id="btn-new-cat">🔄 Kucing Baru</button>
+      <button class="glass-btn btn-reset" id="btn-reset">🗑️ Reset</button>
+    </div>
+
+    <!-- Floating click labels (injected by JS) -->
+    <div id="float-container"></div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
